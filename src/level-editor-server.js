@@ -17,7 +17,7 @@ class LevelEditorServer {
   }
   init(settings) {
     const defaultSettings = {
-      port: 3009,
+      port: process.env.PORT || 3009,
       roomCleanupTime: 60
     }
     this.settings = { ...defaultSettings, ...settings }
